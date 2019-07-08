@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+/*注册页面*/
+.underline{text-decoration:underline;}
+.logo { position: relative; }
+.blod{ font-weight:bold}
+/* tab */
+.tabbable { position: relative; width: 100%; margin: 0 auto; *zoom: 1; }
+.tabbable:before, .tabbable:after { display: table; content: ""; }
+.tabbable:after { clear: both; }
+.nav-tabs { margin-left: 0; padding: 0 10px; list-style: none; border-bottom: 1px solid #b4c1a3; *zoom: 1; }/*展示区上边框样式*/
+.nav-tabs:before, .nav-tabs:after { display: table; content: ""; }
+.nav-tabs:after { clear: both; }
+.nav-tabs li { float: left; margin-right: 10px; }
+.nav-tabs li a { display: block; padding: 5px 12px; font: 12px/2 microsoft yahei; color: #606060; }/*tab标签页的样式*/
+.nav-tabs li a:hover { text-decoration: none; color: #008842; }/*鼠标滑过样式*/
+.nav-tabs .active a, .nav-tabs .active a:hover { font-weight: bold; cursor: default; color: #008842; border-bottom: 5px solid #008842; }/*当前标签页样式*/
+.tab-content .tab-pane { display: none; padding: 10px 0; }
+.tab-content .active { display: block; }
+.tab-content ul { margin-left: -40px; }
+.tab-content li { display: inline-block; width: 88px; *display: inline; *zoom: 1; }
+.tab-content li a { display: block; font: 12px/2 microsoft yahei; text-align: right; color: #606060; }
+
+
+input[type=text]:focus, input[type=password]:focus { outline: 1px solid #b1d6ff; }
+.register { padding-top: 30px; }
+.tabbable .right { position: absolute; top: 17px; right: 0; font: 14px/1 "Microsoft YaHei"; }
+.tabbable .right .orange { margin-right: 36px; text-decoration: underline; color: #ef760a; }
+.register .nav-tabs li { margin-bottom: -1px; }
+.register .nav-tabs li a { padding: 14px 66px 11px; font: 18px/1 "Microsoft YaHei"; color: #262626; border: 1px solid #a5c9b6; border-bottom: 0; background-color: #f7f7f7; }
+.register .nav-tabs .active a, .register .nav-tabs .active a:hover { padding-bottom: 12px; font-weight: normal; border-bottom: 0; background: #fff url(../Content/img/tab_bg_active.jpg) 0 0 repeat-x; }
+.register .nav-tabs { padding-left: 240px; border-bottom: 1px solid #a5c9b6; }
+.register .tab-content .tab-pane { padding: 40px 0 50px; border: 1px solid #a5c9b6; border-top: 0; background-color: #fff; }
+.register .field-name { display: inline-block; width: 220px; padding-right: 20px; text-align: right; *display: inline; *zoom: 1; }
+.register .input { margin-right: 20px; }
+.input-phone, .input-mail, .input-key { background-image: url(../Content/img/bg_input.png); background-repeat: no-repeat; }
+.input-phone { background-position: 276px -30px; }
+.input-mail { background-position: 276px 10px; }
+.input-key { background-position: 276px -70px; }
+.register .fr { width: 330px; height: 340px; padding-top: 50px; font: 14px/56px "Microsoft YaHei"; text-align: center; background: url(../Content/img/register_line.jpg) 0 0 repeat-y; }
+input[type=checkbox] { width: 14px; height: 14px; margin-right: 9px; vertical-align: -1px; }
+/*注册成功*/
+.register-succ { margin-bottom: 60px; padding-top: 80px; font: 24px/1 "Microsoft YaHei"; text-align: center; color: #008842; }
+.register-succ i { display: inline-block; width: 50px; height: 50px; margin-right: 20px; vertical-align: middle; background: url(../Content/img/bg_login.png) -360px -196px no-repeat; *display: inline; *zoom: 1; }
+.register-succ a { display: block; width: 127px; height: 40px; margin: 60px auto; font: 16px/40px "Microsoft YaHei"; color: #fff; border-radius: 3px; }
+
+/*服务协议弹框*/
+.protocol-poput .popout-wrap { margin-top: -250px; margin-left: -470px; }
+.protocol-poput .popout-wrap, .protocol-poput .popout-con { width: 940px; height: 500px; }
+.protocol-poput .con { padding: 10px; }
+.protocol-poput h1 { line-height: 55px; text-align: center; }
+.protocol-poput .title { height: 40px; padding: 0; line-height: 40px; font-size: 16px; font-weight: bold; text-align: center; color: #6ab930; border-bottom: 1px solid #6ab930; background: #fafcf6; }
+.protocol-poput .title .close { position: absolute; top: 12px; right: 20px; width: 13px; height: 13px; background: url(../Content/img/login.png) no-repeat 0 0; }
+.protocol-poput .title .close:hover { background-position: -26px 0; }
+.register-protocol { overflow-y: scroll; height: 380px; color: #555 !important; }
+.register-protocol h4, .register-protocol h5 { line-height: 35px; }
+.register-protocol p { line-height: 20px; text-align: left; }
+.register-protocol strong { margin-right: 5px; }
+.register-protocol .doc div { margin-bottom: 20px; }
+.register-protocol .doc a:hover { color: #008841; }
+.protocol-poput .btn-gn { width: 250px !important; height: 35px !important; line-height: 35px !important; font-size: 16px; }
+.protocol-poput .btnbox { margin-top: 12px; }
+
+/*隐私协议弹框*/
+.protocol-poput2 .popout-wrap { margin-top: -250px; margin-left: -470px; }
+.protocol-poput2 .popout-wrap, .protocol-poput2 .popout-con { width: 940px; height: 500px; }
+.protocol-poput2 .con { padding: 10px; }
+.protocol-poput2 h1 { line-height: 55px; text-align: center; }
+.protocol-poput2 .title { height: 40px; padding: 0; line-height: 40px; font-size: 16px; font-weight: bold; text-align: center; color: #6ab930; border-bottom: 1px solid #6ab930; background: #fafcf6; }
+.protocol-poput2 .title .close { position: absolute; top: 12px; right: 20px; width: 13px; height: 13px; background: url(../Content/img/login.png) no-repeat 0 0; }
+.protocol-poput2 .title .close:hover { background-position: -26px 0; }
+.protocol-poput2 .btn-gn { width: 250px !important; height: 35px !important; line-height: 35px !important; font-size: 16px; }
+.protocol-poput2 .btnbox { margin-top: 12px; }

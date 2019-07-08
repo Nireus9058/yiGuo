@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>易果网</title>
+
+<!-- <link rel="shortcut icon" href="../Content/img/yiguo.ico">  -->
+<!-- <script type="text/javascript" id="veConnect" async="" crossorigin="anonymous" src="libs/capture-apps-4.20.1.js"></script> -->
+<!-- <script type="text/javascript" async="" src="libs/collect.js"></script>
+<script type="text/javascript" async="" src="libs/dc.js"></script>
+<script type="text/javascript" async="" src="libs/vds.js"></script> -->
+<!-- <script type="text/javascript" async="" src="libs/adw.js"></script> -->
+<!-- <script src="libs/tm.js?id=TM-5FXI55" async=""></script>  -->
+<script src="libs/jquery.js"></script>       
+<link href="libs/public2.css" rel="stylesheet">
+<link href="libs/login.css?v20161205" rel="stylesheet" type="text/css">      
+<link href="libs/themes.css" rel="stylesheet">        
+<script src="libs/tab.js"></script>        
+<script src="libs/FormValidate.js"></script>
+            
+<!-- <script type="text/javascript">
+    $(function () {
+        //手机易果
+        $('.mobile .mobile-tit').wrap('<div class="mobile-tit-w"></div>');
+        $('.mobile').hover(function () {
+            $(this).addClass('mobile-hover');
+        }, function () {
+            $(this).removeClass('mobile-hover');
+        });
+
+        Form.VC = '有无效字符，请重新输入'
+    });
+</script> -->
+
+<!--IE6png兼容-->
+<!--[if IE 6]>
+<script src="/Content/DD_belatedPNG.js"></script>
+<script src="/Content/IE6png.js"></script>
+<![endif]-->
+<!-- <script src="/Content/script/topdsp.js"></script><script type="text/javascript" async="" src="//configch2.veinteractive.com/tags/CBD65260/4995/49F7/B51A/5963EB93BD47/tag.js"></script> -->
+</head>
+<body id="body">
+<div class="header clearfix">
+  <div class="wrap">
+    <div class="logo">
+        <a href="#" url="images/logo.png"></a>
+        <span class="h-tit">登录</span>
+    </div>
+  </div>
+</div>
+
+<!-- <script type="text/javascript">
+$(function () {
+    $('#Pwd').keydown(function (e) {
+
+        if (e.keyCode == 13) {
+            document.getElementById("btnLogin").click(); //调用登录按钮的登录事件
+        }
+    });
+
+    $("#btnLogin").click(function () {
+        if (Form.Validate($("#UserName").val())) {
+            $("#msg-wrap").addClass("msg-wrap").children("div").addClass("msg-error").html(Form.VC);
+            return false;
+        }
+
+        $('form').submit();
+    });
+
+    $(".gray").click(function () {
+        $("#imgcode").attr("src", "/verifycode" + "?_t=" + new Date().getTime());
+    });
+    
+    $("#p-code-btn").on("click", ".qq,.sina", function () {
+        $("#p-code").show();
+    })
+    $("#p-code").on("click", ".close", function () {
+        $("#p-code").hide();
+    })
+});
+</script> -->
+
+<form action="register.html" method="post">   
+<div class="login">
+    <div class="wrap clearfix">
+        <div class="fl"></div>
+        <div class="fr">
+            <p class="right"></p>
+            <div class="login-main">
+                <p><strong>欢迎登录</strong><span>还没有账号？<a class="green" href="/Register">立即注册</a></span></p>
+                
+                <div class="msg-wrap">
+                    <div class="msg-error"style="display:block">
+                            账号密码不符
+                    </div>
+                </div>
+
+                <p><span class="input-phone-icon">&nbsp;</span><input class="input input-phone" id="UserName" name="UserName" placeholder="邮箱/账号/已验证手机" type="text" value="" /></p>             
+                <p><span class="input-key-icon">&nbsp;</span><input class="input input-key" id="Pwd" name="Pwd" placeholder="密码" type="password" />
+                </p>
+                
+                <p><input class="input input-key" id="VerifyCode" name="VerifyCode" placeholder="验证码" style="width:100px;float:left;" type="text" value="" />
+                    <img src='images/verifycode.jpg' id="imgcode" onclick="this.src=this.src" style="float:left;" />
+                    <a href="javascript:void(0)" class="gray" style="float:left;margin-top:13px;">换一张</a>
+                </p>
+
+                <p><label><input data-val="true" data-val-required="自动登录 字段是必需的。" id="UserNameRemeber" name="UserNameRemeber" type="checkbox" value="true" /><input name="UserNameRemeber" type="hidden" value="false" /> 自动登录</label><span> <a class="gray" href="/FindPwd">忘记登录密码？</a>   </span></p>
+                <p><a id="" href="javascript:void(0)" class="btn-green-l">登 &#160; 录</a></p>
+               
+
+                <p>第三方登录</p>
+
+                <div id="p-code-btn"><a href="javascript:;" class="qq"><i></i></a><a href="javascript:;" class="sina"><i></i></a><a href="javascript:;" class="ay"><i></i></a></div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+<!-- 登录表结束 -->
+<!------- 页尾开始 ------->
+<div class="footer" style="background:#f7f8f8">
+    <div class="wrap">
+        <dl class="col1">
+            <dt>新手指南</dt>
+            <dd>
+                <p><a href="#">账户注册</a></p>
+                <p><a href="#">购物流程</a></p>
+                <p><a href="#">订购方式</a></p>
+                <p><a href="#">悠币说明</a></p>
+                <p><a href="#">会员等级</a></p>
+            </dd>
+        </dl>
+        <dl class="col2">
+            <dt>付款方式</dt>
+            <dd>
+                <p><a href="#">支付方式</a>/<a href="#">发票说明</a></p>
+                <p><a href="#">礼品卡章程</a></p>
+                <p><a href="#">优惠代码</a></p>
+                <p><a href="#">卡券购买章程</a></p>
+            </dd>
+        </dl>
+        <dl class="col3">
+            <dt>配送方式</dt>
+            <dd>
+                <p><a href="#">配送运费</a></p>
+                <p><a href="#">时间及范围</a></p>
+            </dd>
+        </dl>
+        <dl class="col4">
+            <dt>售后服务</dt>
+            <dd>
+                <p><a href="#">退换货政策</a></p>
+                <p><a href="#">退换货流程</a></p>
+                <p><a href="#">常见问题</a></p>
+                <p><a href="#">投诉与建议</a></p>
+            </dd>
+        </dl>
+        <dl class="col5">
+            <dt>关于我们</dt>
+            <dd>
+                <p><a href="#">公司介绍</a></p>
+                <p><a href="#">联系我们</a></p>
+                <p><a href="#">业务合作</a></p>
+                <p><a href="#">诚信举报</a></p>
+                <p><a href="#">用户协议</a></p>
+                <p><a href="#">隐私协议</a></p>
+            </dd>
+        </dl>
+        <div class="service"><span>客服热线 400-000-7788</span><span>周一至周日 9:00-21:00</span></div>
+        <div class="copyright">
+            <p>企业采购或团购企业采购或团购企业采购或团购企业采购或团购企业采购或团购企业采购或团购企业采购或团购。</p>            
+            <p><a href="#" target="_blank" rel="nofollow">沪ICP备09008015号</a>Copyright © 2005-2019 版权所有</p>
+            <p class="authentication">
+            <a href="http://www.yiguo.com/legal" target="_blank" rel="nofollow"><img src="http://img07.yiguoimg.com/d/web/171208/00652/173249/153685368061665897_121x29.png"></a>
+            <a href="#" target="_blank"><img src="images/footer_copy.jpg"  height="47px"></a>
+            <a target="_blank" href="images/footer_copy.jpg" style="">
+            <img src="http://www.beian.gov.cn/file/ghs.png" ><span style="width: 180px;">沪公网安备 31010502000002</span></a>
+            </p>
+        </div>
+    </div>
+</div>
+<!------- 页尾结束 ------->
+    
+        
+    
+<!-- <script src="libs/o_code.js"></script>
+</body> -->
+
+<!-- <script type="text/javascript">
+    $(document).ready(function () {
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-20131478-1']);
+        _gaq.push(['_setDomainName', 'yiguo.com']);
+        _gaq.push(['_setSiteSpeedSampleRate', 50]);
+        _gaq.push(['_addOrganic', 'baidu', 'word']);
+        _gaq.push(['_addOrganic', 'soso', 'w']);
+        _gaq.push(['_addOrganic', 'youdao', 'q']);
+        _gaq.push(['_addOrganic', 'so.360.cn', 'q']);
+        _gaq.push(['_addOrganic', 'sogou', 'query']);
+        _gaq.push(['_setCampNameKey', 'n']);
+        _gaq.push(['_setCampSourceKey', 's']);
+        _gaq.push(['_setCampMediumKey', 'm']);
+        _gaq.push(['_setCampTermKey', 'k']);
+        _gaq.push(['_setCampContentKey', 'c']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    });
+</script> -->
+</body>
+<script src="js/register.js"></script>
+</html>

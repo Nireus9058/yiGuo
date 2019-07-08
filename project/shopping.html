@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>购物车-易果网</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Keywords" content="水果，进口水果，国产水果，易果网" />
+    <meta name="Description" content="易果生鲜"/>
+    <meta property="qc:admins"/>
+<script type="text/javascript">
+    var yg_x = new Date();
+    var httpUrlOneStats="http://tracker.yiguo.com";
+</script>
+<link rel="shortcut icon" href="http://static01.yiguo.com/cart/images/yiguo.ico" />
+<link href="libs/shopping/public3.css" rel="stylesheet" type="text/css" />
+<link href="libs/shopping/yg.css" rel="stylesheet" type="text/css" /> 
+<link href="libs/shopping/cart.css" rel="stylesheet" type="text/css" />
+
+<!-- start Dplus -->
+    <!-- <script type="text/javascript">!function (a, b) { if (!b.__SV) { var c, d, e, f; window.dplus = b, b._i = [], b.init = function (a, c, d) { function g(a, b) { var c = b.split("."); 2 == c.length && (a = a[c[0]], b = c[1]), a[b] = function () { a.push([b].concat(Array.prototype.slice.call(arguments, 0))) } } var h = b; for ("undefined" != typeof d ? h = b[d] = [] : d = "dplus", h.people = h.people || [], h.toString = function (a) { var b = "dplus"; return "dplus" !== d && (b += "." + d), a || (b += " (stub)"), b }, h.people.toString = function () { return h.toString(1) + ".people (stub)" }, e = "disable track track_links track_forms register unregister get_property identify clear set_config get_config get_distinct_id track_pageview register_once track_with_tag time_event people.set people.unset people.delete_user".split(" "), f = 0; f < e.length; f++) g(h, e[f]); b._i.push([a, c, d]) }, b.__SV = 1.1, c = a.createElement("script"), c.type = "text/javascript", c.charset = "utf-8", c.async = !0, c.src = "//w.cnzz.com/dplus.php?token=1915ef989c5aence66fa", d = a.getElementsByTagName("script")[0], d.parentNode.insertBefore(c, d) } }(document, window.dplus || []), dplus.init("1915ef989c5aence66fa");</script> -->
+    <!-- end Dplus -->
+    <!-- <script src="http://static01.yiguo.com/common/topdsp.js"></script>     -->
+</head>
+<body id="body">
+<div class="w">   
+<!------- 顶部工具栏 ------->
+    <div class="site-nav">
+        <div class="wrap">
+            <ul class="fl">
+                <li>欢迎光临易果生鲜！</li>
+                    <li>
+                        <img src="images/notice.png" style="vertical-align:middle;width:16px;height:16px;">
+                        <a href="#" target="_blank">网警提示</a>
+                    </li>
+            </ul>
+            <ul class="fr">
+                <li class="apt">
+                    <img src="images/招聘1.png" style="vertical-align:middle;">
+                    <a href="#" target="_blank">人才招聘</a>
+                </li>
+                <li class="apt">
+                <img src="images/aptitudeicon.png" style="vertical-align:middle;">
+                <a href="#" target="_blank">营业资质</a>
+                </li>
+                <li class="TEL"><a href="#" target="_blank"><i></i>礼品兑换券入口</a></li>
+                <li class="pay"><a href="#" target="_blank"><i></i>礼品卡绑定</a></li>
+                <li class="mobile">
+                    <div class="tit"><a href="javascript:void(0)"><i></i>手机易果<s></s></a></div>
+                </li>
+                <li class="myyiguo">
+                    <div class="tit"><a href="#" target="_blank"><i></i>我的易果<s></s></a></div>
+                    <div class="con">
+                        <a href="#">我的订单</a>
+                        <a href="#">我的优惠券</a>
+                        <a href="#">我的悠币</a>
+                        <a href="#">我的收藏</a>
+                        <a href="#">我的退换货</a>   
+                        <a href="#">退出</a>
+                    </div>
+                </li>
+                <li><a href="#">[注册]</a></li>
+                <li><a href="#">[登录]</a></li>                
+            </ul>
+        </div>
+    </div>
+<!------- 头部 ------->
+<div class="header clearfix">
+    <div class="wrap">
+        <div class="logo">
+            <a href="#" target="_blank"></a>           
+        </div>
+        <div class="steps">
+            <ul>
+                <li class="on"><b class="b1"></b><span>我的购物车</span></li>
+                <li><i></i><b class="b2"></b><span>填写订单信息</span></li>
+                <li><i></i><b class="b3"></b><span>成功提交订单</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="theLogin" class="popout p-login" style="display:none;">
+    <div class="popout-wrap">
+        <div class="popout-con">
+            <div class="title" style="margin-bottom:40px;">登    录<a class="close" href="javascript:void()"></a></div>
+
+            <iframe src="https://login.yiguo.com/login/SimIndex?Url=http://cart.yiguo.com/ShopCart/RedirectToOrder" id="dialogIframe" name="dialogIframe" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" style="border: 0px; width: 100%; height: 79%;"></iframe>
+        </div>
+    </div>
+    <div class="popout-bg">&nbsp;</div>
+</div>
+<!-------  我的购物车 ------->
+<div class="cart">
+    <div class="wrap">
+        <!--购物车空-->
+        <div class="cart-none" style="display:block;">
+            <p>
+            <b>购物车是空的，去买点东西吧！<a href="#">继续逛逛&gt;&gt;</a></b>
+                <br>您还尚未
+                <a href="https://login.yiguo.com/Login?Url=http://cart.yiguo.com/ShopCart">登录</a>
+            </p>
+        </div>
+            <!--特惠换购-->
+    <div class="preferential-buy">
+    </div>
+    </div>
+</div>
+
+<style>
+    i {
+        background-image: none;
+    }
+</style>
+<!-- 页尾 -->
+<div class="footer">
+    <div class="wrap">
+        <dl class="col1">
+            <dt>新手指南</dt>
+            <dd>
+                <p><a href="#">账户注册</a></p>
+                <p><a href="#">购物流程</a></p>
+                <p><a href="#">订购方式</a></p>
+                <p><a href="#">悠币说明</a></p>
+                <p><a href="#">会员等级<i class="ml5"><img src="http://img06.yiguoimg.com/e/web/170315/00941/154425/icon-new.png"></i></a></p>
+            </dd>
+        </dl>
+        <dl class="col2">
+            <dt>付款方式</dt>
+            <dd>
+                <p><a href="#">支付方式</a>/<a href="#">发票说明</a></p>
+                <p><a href="#">礼品卡章程</a></p>
+                <p><a href="#">优惠代码</a></p>
+                <p><a href="#">卡券购买章程</a></p>
+            </dd>
+        </dl>
+        <dl class="col3">
+            <dt>配送方式</dt>
+            <dd>
+                <p><a href="#">配送运费</a></p>               
+                <p><a href="#">时间及范围</a></p>
+            </dd>
+        </dl>
+        <dl class="col4">
+            <dt>售后服务</dt>
+            <dd>
+                <p><a href="#">退换货政策</a></p>
+                <p><a href="#">退换货流程</a></p>
+                <p><a href="#">常见问题</a></p>
+                <p><a href="#">投诉与建议</a></p>
+            </dd>
+        </dl>
+        <dl class="col5">
+            <dt>关于我们</dt>
+            <dd>
+                <p><a href="#">公司介绍</a></p>
+                <p><a href="#">公司介绍</a></p>
+                <p><a href="#">公司介绍</a></p>
+                <p><a href="#">公司介绍</a></p>
+                <p><a href="#">公司介绍</a></p>
+                <p><a href="#">公司介绍</a></p>                 
+            </dd>
+        </dl>
+        <div class="service"><span>客服热线 400-000-7788</span>
+            <span>周一至周日 9:00-21:00</span>
+        </div>
+        <div class="copyright">
+            <p>公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍摘公司介绍公司介绍公司介绍公司介绍.</p>
+
+            <p><a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow">沪ICP备09008015号</a> Copyright © 2005-2019 版权所有</p>
+            <p class="authentication">
+                <a href="#" target="_blank" rel="nofollow"><img src="http://img07.yiguoimg.com/d/web/171208/00652/173249/153685368061665897_121x29.png"></a>
+                <a href="#" target="_blank"><img src="images/footer_copy.jpg"  height="47px"></a>
+                <a target="_blank" href="#" style="">
+                    <img src="http://www.beian.gov.cn/file/ghs.png"><span style="width: 180px;">沪公网安备 31010502000002号</span>
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+    <!-- <script type="text/javascript">
+    var nowDate = new Date();
+    var nowTime = nowDate.getFullYear() + "-" + (nowDate.getMonth() + 1) + "-" + nowDate.getDate();
+    var endTime = "2017-5-15";
+    if (ToDate(nowTime) >= ToDate(endTime)) {
+        $(".col1 .ml5").hide();
+    }
+
+    function ToDate(str) {
+        var arr = str.split("-");
+        var newDate = new Date(arr[0], arr[1], arr[2]);
+        return newDate;
+    }
+</script> -->
+    
+            
+<script src="libs/shopping/jquery.js"></script>
+<script type="text/javascript" src="libs/shopping/global-v2.js"></script>   
+</body>
+</html>
