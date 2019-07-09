@@ -1,34 +1,28 @@
 class Tab{
     constructor(){
-        this.index=0;
-        this.maxNum=5;
+        this.menu();
         this.init();
-        this.addEvent()
+        
     };
-    addEvent(){
-        let that=this;
-        $('.tab-index').find('li').mouseenter(function(){
-            that.index=$(this).index();
-            $(this).css({
-                background:"#fdf3f2",
-                borderBottom:"1px solid red"
-            }).siblings().css({
-                background:"",
-                borderBottom:"none"
-            })
-            that.display() 
-        });
-        // $('.tab-items').on('click','li',function(){
-        //     $(this).css({
-        //         boxShadow:
-        //     })
-        // })
+    
+    menu(){
+        $(".item").mouseover(function(){
+            $(this).stop().find(".sub-item").show()
+            .parent().siblings().stop().find(".sub-item").hide()
+        
+          })
+        $(".item").mouseout(function(){
+            $(".sub-item").stop().hide();
+          })
+        
     }
+
     init(){
         let that=this;
         $.ajax({
-            url:"http://localhost/stage/data/item.json",
+            url:"http://localhost/1905/day12/project/json/index.json",
             success:function(res){
+                console.log(res)
                 that.res=res;
                 that.display()
             }
@@ -36,17 +30,22 @@ class Tab{
     };
     display(){
         let str="";
-        for(let i=this.index*this.maxNum;i<this.maxNum*this.index+this.maxNum;i++){
-            str+=`<ul>
-                    <li>
-                        <img src="${this.res[i].img}" alt="${this.res[i].name}">
-                        <p>${this.res[i].name}</p>
-                        <span>${this.res[i].price}</span>
-                    </li>
-                </ul>`
+        for(let i=0;i<this.res.length;i++){
+    //    console.log(this.res.length)
+        str+=`<li><a href="#"><img src="${this.res[i].url}"></a></li>`  
+        
         }
-        $('.tab-items').html(str);
+        $('.fm1 ul').html(str); 
+        $('.fm2 ul').html(str);
+        $('.fm3 ul').html(str);
+        $('.fm4 ul').html(str);
+        $('.fm5 ul').html(str);
+        $('.fm6 ul').html(str);
+        $('.fm7 ul').html(str);
+        $('.fm8 ul').html(str);
+        $('.fm9 ul').html(str);   
     }
 }
 new Tab()
      
+

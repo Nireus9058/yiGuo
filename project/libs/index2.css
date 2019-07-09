@@ -36,9 +36,12 @@ box-shadow:0px 0px 7px #444;}
 .floor-title .keyword a:after{content: "|"; padding:0 7px;}
 .floor-title .keyword a.last:after{content: ""; padding:0;}
 .floor-side{ float:left; width:275px; height:462px;}
+
 .floor-main{ position:relative; float:left; background:#fff;}
-.floor-main a{  display: block; -webkit-transition: -webkit-transform .2s linear; -moz-transition: -moz-transform .2s linear; -o-transition: -o-transform .2s linear; transition: transform .2s linear }
-.floor-main a:hover { -webkit-transform: translateX(5px); -moz-transform: translateX(5px); -ms-transform: translateX(5px); -o-transform: translateX(5px); transform: translateX(5px) }
+.floor-main a{display: block; transition: transform .2s linear;width:230px ;height:230px}
+.floor-main ul li:nth-child(3){width:461px ;height:230px}
+.floor-main ul li:nth-child(4){width:461px ;height:230px}
+.floor-main a:hover {transform: translateX(5px) }
 
 .floor-layout1{}
 .floor-layout1 ul{ overflow: hidden; zoom: 1; margin-left: -6px;}
@@ -47,7 +50,7 @@ box-shadow:0px 0px 7px #444;}
 .floor-layout1 li:hover { -webkit-transform: translateX(5px); -moz-transform: translateX(5px); -ms-transform: translateX(5px); -o-transform: translateX(5px); transform: translateX(5px) }
 .floor-layout1 img{ display:block;}
 .floor-layout1 p{ height: 40px; line-height: 20px; padding:5px 10px; color: #575757; text-align: center; background:#fff; white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
-.floor-layout1 b{ display:block; color:#000; font: normal 14px/20px; "Microsoft YaHei"; white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.floor-layout1 b{ display:block; color:#000; font: normal 14px/20px; white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 
 .floor-layout2 .floor-main{ width:924px; height:462px; border-top:1px solid #d5d5d5; border-left:1px solid #d5d5d5}
 .floor-layout2 li{ float:left; overflow:hidden; width:230px; height:230px; border-right: 1px solid #d5d5d5; border-bottom: 1px solid #d5d5d5;}
