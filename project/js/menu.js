@@ -29,23 +29,36 @@ class Tab{
         })
     };
     display(){
-        let str="";
-        for(let i=0;i<this.res.length;i++){
-    //    console.log(this.res.length)
-        str+=`<li><a href="#"><img src="${this.res[i].url}"></a></li>`  
+       
+    //     for(let i=0;i<this.res.length;i++){
+    // //    console.log(this.res.length)
+    //     str+=`<li><a href="#"><img src="${this.res[i].url}"></a></li>`  
         
+    //     }
+    //     $('.fm1 ul').html(str); 
+    //     $('.fm2 ul').html(str);
+    //     $('.fm3 ul').html(str);
+    //     $('.fm4 ul').html(str);
+    //     $('.fm5 ul').html(str);
+    //     $('.fm6 ul').html(str);
+    //     $('.fm7 ul').html(str);
+    //     $('.fm8 ul').html(str);
+    //     $('.fm9 ul').html(str);   
+    // }
+    for(let i=1;i<this.res.length;i++){
+        console.log(this.res.length)
+        // this.list = $("<dd class='list'></dd>")
+        let str="";
+        for(let j=0;j<this.res[i].length;j++){
+            str+=`<li index="${this.res[i][j].goodId}">
+                <a href="#"><img src="${this.res[i][j].url}"></a>
+</li>`
         }
-        $('.fm1 ul').html(str); 
-        $('.fm2 ul').html(str);
-        $('.fm3 ul').html(str);
-        $('.fm4 ul').html(str);
-        $('.fm5 ul').html(str);
-        $('.fm6 ul').html(str);
-        $('.fm7 ul').html(str);
-        $('.fm8 ul').html(str);
-        $('.fm9 ul').html(str);   
+        $(`.fm${i}`).find('ul').html(str)
+   
     }
 }
-new Tab()
+}
+new Tab();
      
 

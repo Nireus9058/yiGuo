@@ -1,25 +1,78 @@
 class Page{
     constructor(){
-        this.shopping();
+        this.cont = document.querySelector(".goods_list");
         this.xuan();
         this.init();
+       
+        this.addEvent();
+        this.shopping();
+        
     }
-shopping(){
-//商品购物车
-$(".box").mouseover(function(){
-    $(this).find(".p-buy").stop().show()
-    .parent().sibling().find(".p-buy").stop().hide();
-})
-$(".box").mouseout(function(){
-    $(".p-buy").stop().hide();
-  })
-    }
+
 xuan(){
 //选项卡
 $(".nav-items").find("li").mouseenter(function(){
     var index = $(this).index();
     $(".pox").find(".big").eq(index).stop().slideDown().siblings().stop().slideUp()
 })
+    }
+addEvent(){
+        var that = this;
+        this.cont.onclick = function(eve){
+          
+            var e = eve || window.event;
+            var t = e.target || e.srcElement;
+            if(t.className == "btn-buy"){
+                console.log(1)
+                // 2.获取当前的商品ID
+                that.id = t.parentNode.getAttribute("index");
+                // console.log(t.parentNode.getAttribute("index"))
+                // 3.存localstorage
+                that.setData();
+            }
+        }
+    }
+setData(){
+        // console.log(this.id);
+        // 保存多个商品，数量，一条本地存储
+        // 数组中放对象的形式处理数据
+        // 每个对象是一个商品
+        // 整个数组是一条本地存储
+        // [{id:"adsa",num:1},{},{}]
+
+        this.goods = localStorage.getItem("goods");
+
+        if(this.goods){
+            // 不是第一次
+            this.goods = JSON.parse(this.goods)
+
+            var onoff = true;
+            // 之后存
+            for(var i=0;i<this.goods.length;i++){
+                // 老的
+                if(this.goods[i].id == this.id){
+                    this.goods[i].num++;
+                    onoff = false;
+                }
+            }
+            // 新的
+            if(onoff){
+                this.goods.push({
+                    id:this.id,
+                    num:1
+                })
+            }
+        }else{
+            // 第一次存
+            //     直接存
+            this.goods = [{
+                id:this.id,
+                num:1
+            }];
+        }
+        
+        // 最后将数据设置回去
+        localStorage.setItem("goods",JSON.stringify(this.goods))
     }
 init(){
     let that=this;
@@ -36,7 +89,7 @@ display(){
     let str="";
     for(let i=0;i<this.res.length;i++){
 //    console.log(this.res.length)
-    str+=`  <li class="box product_item j_product" _type="0" _productid="6000036434">
+    str+=`  <li class="box product_item j_product" _type="0" _productid="6000036434" index="${this.res[i].goodsId}">
              <div class="p_img clearfix">
                 <a href="details.html" target="_blank">
                  <img src="${this.res[i].src}" width="290" height="290" class="j_product_img">
@@ -62,6 +115,16 @@ display(){
     $('.goods_list ul').html(str); 
   
 }
+shopping(){
+    //商品购物车
+    $(".box").mouseover(function(){
+        $(this).find(".p-buy").stop().show()
+        .parent().sibling().find(".p-buy").stop().hide();
+    })
+    $(".box").mouseout(function(){
+        $(".p-buy").stop().hide();
+      })
+        }
 
 }
 

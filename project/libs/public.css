@@ -249,13 +249,10 @@ transition: all .2s ease-in;}
 .sidebar { display:block; z-index: 100;/* position:absolute;跟随定位*/ position:fixed; bottom: 20px; right: 47%; margin-right: -625px; /*IE屏幕定位*/ _position: absolute; _bottom: auto; _top:expression(eval(document.documentElement.scrollTop)); _margin-top: 630px; /*IE屏幕定位END*/ width:56px; }
 .w1280 .sidebar{ position: fixed; right:7px; margin-right:0;}
 .sidebar .s-btn { overflow: hidden; display: block; width:50px; height: 42px; margin-bottom:10px; background:url(../images/sidebar.png) no-repeat left top }
-.sidebar .goTop{ display:none; _display:nblock; background-position:0 0}
+.sidebar .goTop{ display:block; background-position:0 0}
 .sidebar .service{ background-position:0 -46px;}
 .sidebar .goTop:hover{ background-position:-56px 0}
 .sidebar .service:hover{ background-position:-56px -46px}
-
-
-
 
 /* add by hj*/
 .service-entry {
