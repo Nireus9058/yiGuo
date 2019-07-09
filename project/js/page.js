@@ -18,15 +18,16 @@ $(".nav-items").find("li").mouseenter(function(){
     }
 addEvent(){
         var that = this;
+        
         this.cont.onclick = function(eve){
-          
+     
             var e = eve || window.event;
             var t = e.target || e.srcElement;
             if(t.className == "btn-buy"){
                 console.log(1)
                 // 2.获取当前的商品ID
-                that.id = t.parentNode.getAttribute("index");
-                // console.log(t.parentNode.getAttribute("index"))
+                that.id = t.parentNode.parentNode.getAttribute("index");
+               
                 // 3.存localstorage
                 that.setData();
             }
@@ -50,6 +51,7 @@ setData(){
             // 之后存
             for(var i=0;i<this.goods.length;i++){
                 // 老的
+                console.log(this.goods[i].id)
                 if(this.goods[i].id == this.id){
                     this.goods[i].num++;
                     onoff = false;

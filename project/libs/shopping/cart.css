@@ -160,7 +160,7 @@ del { color: #888; font-size:12px; line-height:2em; }
 
 /*购物车为空*/
 .cart-none{ border: 1px solid #e3e6e0; background:#fff; line-height:30px; padding: 70px 0;}
-.cart-none p{ height: 280px;font-size: 14px;text-align: center; background: url(../images/none-bg.jpg) no-repeat center bottom;}
+.cart-none p{ height: 280px;font-size: 14px;text-align: center; background: url(../images/none-bg.jpg) no-repeat center bottom;display:block}
 .cart-none p b{font-size: 14px; font-weight:normal; }
 .cart-none p b a{ margin-left:15px;}
 .cart-none a{ color: #008842;}
