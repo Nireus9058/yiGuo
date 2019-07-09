@@ -45,7 +45,7 @@ class Tab{
     //     $('.fm8 ul').html(str);
     //     $('.fm9 ul').html(str);   
     // }
-    for(let i=1;i<this.res.length;i++){
+    for(let i=0;i<this.res.length;i++){
         console.log(this.res.length)
         // this.list = $("<dd class='list'></dd>")
         let str="";
@@ -53,8 +53,9 @@ class Tab{
             str+=`<li index="${this.res[i][j].goodId}">
                 <a href="#"><img src="${this.res[i][j].url}"></a>
 </li>`
+        
         }
-        $(`.fm${i}`).find('ul').html(str)
+        $(`.fm${i+1}`).find('ul').html(str)
    
     }
 }

@@ -885,7 +885,19 @@
 <script src="js/lunbo.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/move.js"></script>
+<script>
 
+$(".banner-slider").banner({
+    aimg:$(".banner-slider").find("img"),
+    left:$(".banner-slider").find(".prev"),	
+	right:$(".banner-slider").find(".next"),			
+    isList:true,			
+    autoPlay:true,			
+    moveTime:200,			
+    index:0
+})
+
+</script>
 
         
 

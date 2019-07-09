@@ -1,3 +1,44 @@
+
+class Page{
+    constructor(){
+    
+        
+        this.init();           
+    }
+
+
+init(){
+    let that=this;
+    $.ajax({
+        url:"http://localhost/1905/day12/project/json/page.json",
+        success:function(res){
+        
+            that.res=res;
+            that.display()
+        }
+    })
+}
+    display(){
+        let url =location.search;
+        let s = url.split("?")[1].split("=")[1];
+        console.log(this.res.length)
+        for(var i=0;i<this.res.length;i++){
+            for(var j=0;j<this.res[i].length;j++){
+                
+                if(this.res[i][j].goodsId == s){
+                $('.pic-big').children('img').attr("src",this.res[i][j].src);
+                $('.b_box').children('img').attr("src",this.res[i][j].src);
+
+            
+            }
+    //    console.log(this.res.length)
+        }
+            
+      }   
+    }
+}    
+new Page;
+
 function Mag(){
     this.sBox = document.querySelector(".pic-big");
     this.bBox = document.querySelector(".b_box");
@@ -18,21 +59,21 @@ function Mag(){
     
     
     Mag.prototype.addEvent = function(){
-       let that = this;
-       this.sBox.addEventListener("mouseover",function(){
+        let that = this;
+        this.sBox.addEventListener("mouseover",function(){
         that.over();
         that.init();
-      
-       })
-       this.sBox.addEventListener("mouseout",function(){
+        
+        })
+        this.sBox.addEventListener("mouseout",function(){
         that.out();
-       })
-       this.sBox.addEventListener("mousemove",function(eve){
-           let e = eve || window.event;
+        })
+        this.sBox.addEventListener("mousemove",function(eve){
+            let e = eve || window.event;
         that.move(e);
-       })
-       
-       
+        })
+        
+        
     }
     
     Mag.prototype.over = function(){
@@ -51,8 +92,8 @@ function Mag(){
     if(t<0) t = 0;
     if(l>this.bBox.offsetWidth - this.span.offsetWidth)
     l=this.bBox.offsetWidth - this.span.offsetWidth;
-    if(t>this.bBox.offsetHeight - this.span.offsetHeight+1)
-    t=this.bBox.offsetHeight - this.span.offsetHeight;
+    if(t>this.bBox.offsetHeight - this.span.offsetHeight-50)
+    t=this.bBox.offsetHeight - this.span.offsetHeight+50+"px";
     
     let x = l / (this.sBox.offsetWidth-this.span.offsetWidth);
     let y = t / (this.sBox.offsetHeight-this.span.offsetHeight);
@@ -68,4 +109,4 @@ function Mag(){
     onload = function(){
         new Mag();
     }
-    
+        

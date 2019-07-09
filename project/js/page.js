@@ -89,26 +89,29 @@ init(){
 }
 display(){
     let str="";
-    for(let i=0;i<this.res.length;i++){
+    console.log(this.res)
+    for(let i=0;i<this.res[0].length;i++){
 //    console.log(this.res.length)
-    str+=`  <li class="box product_item j_product" _type="0" _productid="6000036434" index="${this.res[i].goodsId}">
+    str+=`  <li class="box product_item j_product" _type="0" _productid="6000036434" index="${this.res[0][i].goodsId}">
+         <a href="http://localhost/1905/day12/project/details.html?id=${this.res[0][i].goodsId}" target="_blank">
              <div class="p_img clearfix">
-                <a href="details.html" target="_blank">
-                 <img src="${this.res[i].src}" width="290" height="290" class="j_product_img">
-                </a>
+                
+                 <img src="${this.res[0][i].src}" width="290" height="290" class="j_product_img">
+               
              </div>
              <div class="p_info clearfix">
-                 <div class="p_name"><a href="details.html" target="_blank">${this.res[i].name}</a></div>
+                 <div class="p_name"><a>${this.res[0][i].name}</a></div>
                 <div class="p_price">
                     <span class="price">
-                    <strong>${this.res[i].price}</strong>
+                    <strong>${this.res[0][i].price}</strong>
                     </span>                                
                 </div>
              </div>
             <div class="p-buy">
-                <span>${this.res[i].tip}</span>
+                <span>${this.res[0][i].tip}</span>
                 <a class="btn-buy" href="javascript:;">加入购物车</a>
             </div>
+            </a>
 </li>
 
    `  
