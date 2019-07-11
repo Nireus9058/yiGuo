@@ -8,7 +8,7 @@ class Login{
             this.msg =$(".msg-error");
             this.msg2 =$(".msg-success");
             this.erweima = $("#VerifyCode")
-          
+            this.msg3=$(".msg-erweima ")
             this.init()
             console.log($(".msg-error"))
             console.log($(".btn-green-l"))
@@ -44,7 +44,8 @@ class Login{
                 localStorage.setItem("usermsg",JSON.stringify(this.usermsg))
                 // 给提示语句
                 // alert("成功")
-                  
+                var abc =this.erweima.val()
+                if(abc){              
                     this.msg2.show()   
                   
                     // 三秒后跳转
@@ -53,6 +54,18 @@ class Login{
                     }, 3000);
                   
                     // 结束              
+                }else{
+                    this.usermsg[i].onoff = 0;
+                    this.msg3.show()
+                    setTimeout(() => {
+                        this.msg3.hide()
+                    }, 2000);
+                 
+                    return;
+
+                }
+
+
             }  
             
         }       
