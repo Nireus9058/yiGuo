@@ -9,6 +9,7 @@
     <meta property="qc:admins" content="15753240576117576375" />
     <link rel="shortcut icon" href="http://static01.yiguo.com/common/images/yiguo.ico" />
     <link href="libs/details/public.css" rel="stylesheet" type="text/css">
+ 
     <link href="libs/details/customer.css" rel="stylesheet" type="text/css">
     <link href="libs/details/pageguide.css" rel="stylesheet" type="text/css">
     
@@ -17,52 +18,15 @@
     <script src="libs/details/jquery.js"></script>
     <script src="libs/details/jquery.lazyload.min.js"></script>
    
-    <!-- <script>
-        yg_x = new Date();
-        var yw_data = {};
-    </script>
-    <script type="text/javascript">
-        var _bdhm_top = 0;
-        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-        var _bdhm_tim = new Image(1, 1);
-        _bdhm_tim.id = "bdhmPerimg";
-        _bdhm_tim.src = _bdhmProtocol + "hm.baidu.com/_tt.gif?si=36a486fbdec46fc52ca666dd2e98f260&rnd=" + Math.round(Math.random() * 2147483647);
-        _bdhm_tim.onload = function () { _bdhm_top = 1; }
-    </script> -->
-
-    <!-- start Dplus -->
-    <!-- <script type="text/javascript">
-        !function (a, b) {
-            if (!b.__SV) {
-                var c, d, e, f;
-                window.dplus = b, b._i = [], b.init = function (a, c, d) {
-                    function g(a, b) {
-                        var c = b.split(".");
-                        2 == c.length && (a = a[c[0]], b = c[1]), a[b] = function () { a.push([b].concat(Array.prototype.slice.call(arguments, 0))) }
-                    }
-
-                    var h = b;
-                    for ("undefined" != typeof d ? h = b[d] = [] : d = "dplus", h.people = h.people || [], h.toString = function (a) {
-                        var b = "dplus";
-                        return "dplus" !== d && (b += "." + d), a || (b += " (stub)"), b
-                    }, h.people.toString = function () { return h.toString(1) + ".people (stub)" }, e = "disable track track_links track_forms register unregister get_property identify clear set_config get_config get_distinct_id track_pageview register_once track_with_tag time_event people.set people.unset people.delete_user".split(" "), f = 0; f < e.length; f++) g(h, e[f]);
-                    b._i.push([a, c, d])
-                }, b.__SV = 1.1, c = a.createElement("script"), c.type = "text/javascript", c.charset = "utf-8", c.async = !0, c.src = "//w.cnzz.com/dplus.php?token=1915ef989c5aence66fa", d = a.getElementsByTagName("script")[0], d.parentNode.insertBefore(c, d)
-            }
-        }(document, window.dplus || []), dplus.init("1915ef989c5aence66fa");
-    </script> -->
-
-    <!-- end Dplus -->
-    <!-- <script type="text/javascript" src="http://img02.yiguo.com/e/web/130101/cdn/login/scripts/ygm.dplus-0.5.js"></script> -->
  <style>
- .product-intro {position:relative}
- .pic-big{width:300px;height:300px}
- .pic-big img{width:300px;height:250px}
- .pic-big span{position: absolute;left:0;top:0;background: rgba(200,200,200,0.6);display: none;}
- .pic-big p{width:500px;height:500px;margin: 0;position: absolute;z-index: 1;left:0;top:0;}
- .j_product_img{position:absolute; top:0px;left:0px}
- .b_box{width:300px;height:300px;position: absolute;left:400px;top:50px;overflow: hidden;display: block;z-index:99}
- .b_box img{width: 1000px;position: absolute;}
+.product-intro {position:relative}
+.pic-big{width:300px;height:300px}
+.pic-big img{width:300px;height:250px}
+.pic-big span{position: absolute;left:0;top:0;background: rgba(200,200,200,0.6);display: none;}
+.pic-big p{width:500px;height:500px;margin: 0;position: absolute;z-index: 1;left:0;top:0;}
+.j_product_img{position:absolute; top:0px;left:0px}
+.b_box{width:300px;height:300px;position: absolute;left:400px;top:50px;overflow: hidden;display: block;z-index:99}
+.b_box img{width: 1000px;position: absolute;}
 
  </style>  
 </head>
@@ -221,9 +185,9 @@
             </li>
             <li id="_logout" style="display:none"><a href="javascript:;" class="logout">[退出]</a></li>
             <li id="_loginname" style="display:none"><a rel="nofollow" href="#"></a></li>
-            <li id="_register" style="display:none"><a rel="nofollow" href="#">[注册]</a></li>
-            <li id="_login" style="display:none">
-                <a rel="nofollow" href="#">[登录]</a>
+            <li id="_register" style="display:block"><a rel="nofollow" href="#">[注册]</a></li>
+            <li id="_login" style="display:block">
+                <a rel="nofollow" href="http://localhost/1905/day12/project/login.html">[登录]</a>
             </li>
         </ul>
     </div>
@@ -257,7 +221,7 @@
 <!--购物车 开始-->
 <div class="shopping-cart">
     <dl>
-    <dt class="shopping-btn"><a href="http://cart.yiguo.com/"> 
+    <dt class="shopping-btn"><a href="http://localhost/1905/day12/project/shopping.html"> 
         <span class="totleNum"><b>0</b></span><b class="totlePrice">0.0</b></a>
     </dt>
         <dd class="shopping-list" style="display: none;">

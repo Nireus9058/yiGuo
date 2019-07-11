@@ -20,67 +20,20 @@
 <script src="libs/tab.js"></script>        
 <script src="libs/FormValidate.js"></script>
             
-<!-- <script type="text/javascript">
-    $(function () {
-        //手机易果
-        $('.mobile .mobile-tit').wrap('<div class="mobile-tit-w"></div>');
-        $('.mobile').hover(function () {
-            $(this).addClass('mobile-hover');
-        }, function () {
-            $(this).removeClass('mobile-hover');
-        });
 
-        Form.VC = '有无效字符，请重新输入'
-    });
-</script> -->
 
-<!--IE6png兼容-->
-<!--[if IE 6]>
-<script src="/Content/DD_belatedPNG.js"></script>
-<script src="/Content/IE6png.js"></script>
-<![endif]-->
-<!-- <script src="/Content/script/topdsp.js"></script><script type="text/javascript" async="" src="//configch2.veinteractive.com/tags/CBD65260/4995/49F7/B51A/5963EB93BD47/tag.js"></script> -->
+
 </head>
 <body id="body">
 <div class="header clearfix">
   <div class="wrap">
     <div class="logo">
-        <a href="#" url="images/logo.png"></a>
+        <a href="http://localhost/1905/day12/project/index3.html" url="images/logo.png"></a>
         <span class="h-tit">登录</span>
     </div>
   </div>
 </div>
 
-<!-- <script type="text/javascript">
-$(function () {
-    $('#Pwd').keydown(function (e) {
-
-        if (e.keyCode == 13) {
-            document.getElementById("btnLogin").click(); //调用登录按钮的登录事件
-        }
-    });
-
-    $("#btnLogin").click(function () {
-        if (Form.Validate($("#UserName").val())) {
-            $("#msg-wrap").addClass("msg-wrap").children("div").addClass("msg-error").html(Form.VC);
-            return false;
-        }
-
-        $('form').submit();
-    });
-
-    $(".gray").click(function () {
-        $("#imgcode").attr("src", "/verifycode" + "?_t=" + new Date().getTime());
-    });
-    
-    $("#p-code-btn").on("click", ".qq,.sina", function () {
-        $("#p-code").show();
-    })
-    $("#p-code").on("click", ".close", function () {
-        $("#p-code").hide();
-    })
-});
-</script> -->
 
 <form action="register.html" method="post">   
 <div class="login">
@@ -89,19 +42,25 @@ $(function () {
         <div class="fr">
             <p class="right"></p>
             <div class="login-main">
-                <p><strong>欢迎登录</strong><span>还没有账号？<a class="green" href="/Register">立即注册</a></span></p>
+                <p><strong>欢迎登录</strong><span>还没有账号？<a class="green" href="http://localhost/1905/day12/project/register.html">立即注册</a></span></p>
                 
                 <div class="msg-wrap">
-                    <div class="msg-error"style="display:block">
-                            账号密码不符
+                    <div class="msg-error" style="display:none">
+                        账号密码不符
+                    </div>
+                    <div class="msg-success" style="display:none">
+                        登录成功，三秒后跳转到首页
+                    </div>
+                    <div class="msg-erweima" style="display:none">
+                        请输入正确的二维码
                     </div>
                 </div>
-
+          
                 <p><span class="input-phone-icon">&nbsp;</span><input class="input input-phone" id="UserName" name="UserName" placeholder="邮箱/账号/已验证手机" type="text" value="" /></p>             
                 <p><span class="input-key-icon">&nbsp;</span><input class="input input-key" id="Pwd" name="Pwd" placeholder="密码" type="password" />
                 </p>
                 
-                <p><input class="input input-key" id="VerifyCode" name="VerifyCode" placeholder="验证码" style="width:100px;float:left;" type="text" value="" />
+                <p><input class="input input-key" id="VerifyCode" name="VerifyCode" placeholder="验证码" style="width:100px;float:left;" type="text" value="" required="required"/>
                     <img src='images/verifycode.jpg' id="imgcode" onclick="this.src=this.src" style="float:left;" />
                     <a href="javascript:void(0)" class="gray" style="float:left;margin-top:13px;">换一张</a>
                 </p>
@@ -182,37 +141,6 @@ $(function () {
     </div>
 </div>
 <!------- 页尾结束 ------->
-    
-        
-    
-<!-- <script src="libs/o_code.js"></script>
-</body> -->
-
-<!-- <script type="text/javascript">
-    $(document).ready(function () {
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-20131478-1']);
-        _gaq.push(['_setDomainName', 'yiguo.com']);
-        _gaq.push(['_setSiteSpeedSampleRate', 50]);
-        _gaq.push(['_addOrganic', 'baidu', 'word']);
-        _gaq.push(['_addOrganic', 'soso', 'w']);
-        _gaq.push(['_addOrganic', 'youdao', 'q']);
-        _gaq.push(['_addOrganic', 'so.360.cn', 'q']);
-        _gaq.push(['_addOrganic', 'sogou', 'query']);
-        _gaq.push(['_setCampNameKey', 'n']);
-        _gaq.push(['_setCampSourceKey', 's']);
-        _gaq.push(['_setCampMediumKey', 'm']);
-        _gaq.push(['_setCampTermKey', 'k']);
-        _gaq.push(['_setCampContentKey', 'c']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    });
-</script> -->
 </body>
-<script src="js/register.js"></script>
+<script src="js/logo.js"></script>
 </html>

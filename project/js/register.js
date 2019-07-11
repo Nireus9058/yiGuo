@@ -7,7 +7,7 @@ class Register{
         this.tel2 = $("Phone_AtCode");
         this.btn = $(".btn-green-l");       
         this.code = $("#verficode_tab1");;
-        this.msg = $(".msg");
+        this.msg = $(".pass-error");
         this.error1 =$(".pass-error1");
         this.error2 =$(".pass-error2");
         this.error3 =$(".pass-error3");
@@ -117,8 +117,12 @@ class Register{
             }else{
                 this.usermsg = JSON.parse(localStorage.getItem("usermsg"));
                 for(var i=0;i<this.usermsg.length;i++){
-                    if(this.usermsg[i].user == this.user.value){
-                        this.msg.innerHTML = "重名";
+                    // console.log(this.usermsg[i].user,this.user.val())
+                    if(this.usermsg[i].user == this.user.val()){
+                        // alert("重名")
+                        
+                        this.msg.html ("手机号已经存在");
+                        // this.msg.prev(".xerr").show();
                         return;
                     }
                 }
@@ -127,11 +131,18 @@ class Register{
                     user:this.user.val(),
                     pass:this.pass.val(),
                     onoff:0
+                    
                 })
+  
             }
-            console.log(this.usermsg)
-            console.log("点击")
+            // console.log(this.usermsg)
+            // console.log("点击")
             localStorage.setItem("usermsg",JSON.stringify(this.usermsg))
+            setTimeout(() => {
+                console.log(1)
+                location.href = "http://localhost/1905/day12/project/login.html";
+            }, 3000);
+ 
         }
            
     }

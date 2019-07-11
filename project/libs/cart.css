@@ -25,7 +25,7 @@
 .cart h2 .tips { color: #008842; position: absolute; left: 465px; top: 0; height: 38px; line-height: 38px; text-indent: 0; }
 .on-shopping { cursor: pointer; position: absolute; right: 0; top: 0; color: #008842; text-indent: 0; text-decoration: underline; margin-right: 22px }
 .cart-alert, .order-alert { border: 1px solid #e3e6e0; border-top: 0; padding: 10px 20px; background-color: #fff; }
-.order h2 { height: 38px; line-height: 38px; background-color: #fff; background-position: 0 0; border-bottom: 2px solid #70bd2c; text-indent: -9999em; position: relative }
+.order h2 { height: 38px; line-height: 38px; background-color: #fff; background-position: 0 0; border-bottom: 2px solid #70bd2c;  position: relative }
 /*配送至*/
 .cart .city {position: absolute;  left: 230px;  top: 4px;  text-indent: 0;}
 .cart .city-sz { float:left; height:16px; line-height:16px; margin:7px 0; cursor: pointer; }
@@ -64,7 +64,7 @@
 .tab-content li a { color: #606060; }
 .tab-content li a:hover{ color: #008842 }
 /*购物车列表*/
-.cart-table { width: 100%; border-collapse: collapse; border: 1px solid #ebebeb; margin-bottom: 10px; }
+.cart-table { width: 100%; border-collapse: collapse; border: 1px solid #ebebeb; margin-bottom: 1px; }
 .cart-table th { height: 40px; background-color: #f1f1f1; font: 12px/40px Simsun; color: #262626; text-align: center; padding: 0 10px; }
 .cart-table td { border-top: 1px solid #ebebeb; padding: 10px; text-align: center; }
 .cart-table td img { width: 80px; height: 80px; border: 1px solid #ebebeb; position: relative }
@@ -73,8 +73,8 @@
 .cart-table th.cart-t-check { width: 120px; }
 .cart-table th.cart-t-check input { margin-right: 20px;  vertical-align: middle; }
 .cart-t-img { width: 80px; position: relative }
-.cart-t-info a { font: 14px/2.4em Simsun; }
-.cart-table td.cart-t-info { text-align: left }
+.cart-t-info a { font: 14px/2.4em ; }
+.cart-table td.cart-t-info { text-align: left;width:100px; }
 .bd-title { float: left; height: 20px; color: #fff; font: 12px/20px Simsun; margin-right: 15px; padding: 0 6px; background: #008842; position: relative }
 .bd-promos { float: left; color: #008842; font: 12px/20px Simsun; }
 .cart-t-price { width: 100px; color: #262626;  font-size:14px; line-height:1em;  } 
@@ -139,7 +139,9 @@ del { color: #888; font-size:12px; line-height:2em; }
 .cart-footer a i { display: inline-block; *display:inline;*zoom:1;width: 14px; height: 16px; background-position: -100px -40px; margin-right: 5px; vertical-align: middle }
 .cart-footer .btn { font: bold 18px/1em "微软雅黑"; background-color: #ff5317; color: #fff; padding: 10px 20px; display: inline-block; margin-left: 0 }
 .settle-fixed { z-index: 100000; display: block; overflow: hidden; position: fixed; bottom: 0; left: 0; height: 40px; width: 100%; padding: 10px 0; background-color: #fff; border-top: 1px solid #ddd }
-.cart-footer .wrap { width: 100%; }
+
+.cart-footer .wrap { width: 100%;}
+
 .settle-fixed .wrap { width: 1200px; }
 /*特惠换购*/
 .preferential-buy { position:relative; border: 1px solid #e3e6e0; margin-top: 25px; overflow: hidden; background:#fff; }
@@ -170,7 +172,7 @@ del { color: #888; font-size:12px; line-height:2em; }
 .cart .citytab{ margin:10px 0; padding:0 15px;}
 .cart .citytab span{ display: inline-block; width: 19%; border:1px solid #fff;border-bottom-color: #e0e0e0; text-align: center; cursor:pointer; }
 .cart .citytab .active{position: relative;border-color:#e0e0e0;border-bottom-color: #fff;}
-.cart .city-con .citylist{ display:none; margin: 0 15px 15px;}
+.cart .city-con .citylist{ display:block; margin: 0 15px 15px;}
 .cart .city-con dl{display:block; overflow:hidden; zoom:1; line-height:22px;}
 .cart .city-con dt{font:bold 12px/22px Arial,"Microsoft YaHei"; color:#008842; float:left; margin-right:10px; text-align:center;}
 .cart .city-con dd{overflow:hidden; zoom:1;}

@@ -16,7 +16,7 @@
     <div class="logo">
         <a href="#" url="images/logo.png"></a>
         <span class="h-tit">注册</span>
-        <span class="msg"></span>
+        
     </div>
     </div>
 </div> 
@@ -35,7 +35,7 @@
                         <div class="fl">
                             <p class="clearfix" style="line-height:38px;">
                                 <span class="field-name" style="float:left;">图形验证码</span>
-                                <input type="text" id="verficode_tab1" placeholder="图形验证码" class="input input-yzm" style="float:left;" />
+                                <input type="text" id="verficode_tab1" placeholder="图形验证码" class="input input-yzm" style="float:left;" required="required"/>
                                 <span class="pass-error4"style="display:none;color:red;"><i></i>请输入验证码</span>
                                 <img src='images/verifycode.jpg' id="imgcode" onclick="this.src=this.src" style="float:left;" /><a href="javascript:void(0)" class="gray" style="float:left;line-height:38px;">换一张</a>
                               
@@ -48,8 +48,8 @@
                             <p>
                                 <span class="field-name">手机验证码</span>
                                 <input class="input input-yzm" id="Phone_VerifyCode" name="Phone_VerifyCode" placeholder="手机验证码" type="text" value="" />
-                                <a href="javascript:void(0)" class="btn-yzm" id="Phone_SendCode">获取验证码</a>
-                                <span></span>
+                                <a href="javascript:void(0)" class="btn-yzm" id="Phone_SendCode">获取验证码</a>                              
+                                <span class="pass-error"></span>
                             </p>
                             <p>
                                 <span class="field-name">设置密码</span>
@@ -83,7 +83,7 @@
                     </div>
                 </div>
                 <div class="right">
-                    我已经注册，现在就 <a class="orange" href="/">登录</a>
+                    我已经注册，现在就 <a class="orange" href="login.html">登录</a>
                 </div>
             </div>
         </div>

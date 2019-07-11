@@ -1,0 +1,320 @@
+
+    .page_ad {
+      a {
+        display: block;
+        float: left;
+      }
+    }
+    .filter_sort {
+      a {
+        display: block;
+        float: left;
+        height: 18px;
+        line-height: 18px;
+        margin-left: -1px;
+        padding: 5px 10px;
+        border: 1px solid #c7c7c7;
+        background: #fff;
+      }
+    }
+    .goods_list {
+      ul {
+        overflow: hidden;
+        zoom: 1;
+        margin-left: -13px;
+        _margin-left: -28px;
+      }
+    }
+  
+  .page_ad {
+    a {
+      &:hover {
+        -moz-box-shadow: 0px 0px 7px #777;
+        -webkit-box-shadow: 0px 0px 7px #777;
+        box-shadow: 0px 0px 7px #777;
+      }
+    }
+    .pox {
+      width: 1200px;
+      height: 300px;
+      position: relative;
+    }
+    .big {
+      width: 1200px;
+      height: 300px;
+      margin-bottom: 10px;
+      position: absolute;
+      img {
+        width: 1200px;
+        height: 290px;
+      }
+    }
+    .medium {
+      width: 405px;
+      height: 180px;
+    }
+    .small {
+      width: 180px;
+      height: 180px;
+    }
+    .mr {
+      margin-right: 10px;
+      _margin-right: 9px;
+    }
+  }
+  /*筛选*/
+  .select {
+    width: 1200px;
+    line-height: 25px;
+    margin: 20px 0;
+    .select_list {
+      display: none;
+      position: relative;
+      border: 1px solid #e5e5e5;
+      border-top: none;
+      border-bottom-color: #c7c7c7;
+      background: #f1f1f1;
+    }
+    .tit {
+      float: left;
+      width: 78px;
+      padding: 5px 0 5px 20px;
+      color: #909090;
+    }
+    ul {
+      float: left;
+      position: relative;
+      width: 1100px;
+      padding: 5px 0;
+      zoom: 1;
+      &:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+      }
+    }
+    li {
+      float: left;
+      display: inline;
+    }
+    a {
+      display: inline-block;
+      white-space: nowrap;
+      padding: 0 15px;
+      text-decoration: none;
+      color: #777;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .hot {
+      position: relative;
+      border: 1px solid #dedfdf;
+      border-bottom: none;
+      background: #eaeaea;
+      color: #5c5c5c;
+      .tit {
+        width: auto;
+        color: #5c5c5c;
+      }
+      a {
+        color: #5c5c5c;
+        &:hover {
+          color: #008842;
+        }
+      }
+    }
+    .all {
+      position: relative;
+      background: #eaeaea;
+      border: 1px solid #c7c7c7;
+      border-right-color: #e5e5e5;
+      ul {
+        background: #f1f1f1;
+      }
+      li {
+        &:after {
+          content: "|";
+        }
+        &.last {
+          &:after {
+            content: "";
+          }
+        }
+      }
+    }
+    .select_more {
+      text-align: center;
+      border-top: 6px solid #dedfdf;
+      .btn {
+        position: relative;
+        display: inline-block;
+        float: right;
+        padding: 0 20px;
+        background: #dedfdf;
+        cursor: pointer;
+      }
+    }
+    .current {
+      a {
+        color: #09964e;
+        font-weight: bold;
+      }
+    }
+  }
+  .select a:hover,.select .selected a {
+    color: #008842;
+  }
+  /*排序*/
+  .filter {
+    padding: 5px 10px;
+    background: #eaeaea;
+  }
+  .filter_sort {
+    a {
+      i {
+        width: 10px;
+        height: 16px;
+        margin-left: 3px;
+        background: url(../images/filter_icon.png) no-repeat 0 0;
+      }
+    }
+    .price {
+      i {
+        background-position: -20px 0;
+      }
+    }
+  }
+  .filter_sort a:hover,.filter_sort .on {
+    background: #eee;
+  }
+  .filter_sort a:hover i,.filter_sort .on i {
+    background-position: -10px 0;
+  }
+  .filter_sort .price:hover i,.filter_sort .price.on i {
+    background-position: -20px 0;
+  }
+  .filter_sort .price:hover i.sort_down,.filter_sort .price.on i.sort_down {
+    background-position: -30px 0;
+  }
+  .filter_sort .price:hover i.sort_up,.filter_sort .price.on i.sort_up {
+    background-position: -40px 0;
+  }
+  .filter_ub {
+    float: left;
+    margin-left: 28px;
+    label {
+      float: left;
+      margin-right: 15px;
+      padding: 8px 0;
+    }
+    input {
+      margin: 0 5px 0 0;
+      vertical-align: middle;
+    }
+  }
+  /*商品列表*/
+  .product_item {
+    float: left;
+    position: relative;
+    width: 290px;
+    margin: 15px 0 0 13px;
+    background: #fff;
+    .p_img {
+      position: relative;
+      width: 290px;
+      height: 290px;
+    }
+    .p_info {
+      padding: 10px;
+      height: 48px;
+    }
+    .p_name {
+      height: 16px;
+      margin-bottom: 10px;
+      line-height: 16px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      a {
+        &:hover {
+          color: #008842;
+          text-decoration: underline;
+        }
+      }
+    }
+    .p_price {
+      height: 22px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      .price {
+        font-size: 18px;
+        color: #e7380d;
+        vertical-align: middle;
+      }
+      del {
+        font-size: 12px;
+        color: #777;
+        padding: 0 10px;
+      }
+      .saletip {
+        margin-left: 10px;
+        color: #e8340c;
+        b {
+          padding: 3px 5px;
+          margin-right: 5px;
+          font-weight: normal;
+          color: #fff;
+          background: #e8340c;
+          -webkit-border-radius: 2px;
+          -moz-border-radius: 2px;
+          border-radius: 2px;
+        }
+      }
+    }
+    .tag {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      width: 46px;
+      height: 46px;
+    }
+    .p-buy {
+      display: none;
+      position: absolute;
+      left: 0;
+      bottom: 68px;
+      width: 270px;
+      padding: 10px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.9);
+      span {
+        display: block;
+        width: 270px;
+        line-height: 16px;
+        margin-bottom: 10px;
+      }
+    }
+    .btn-buy {
+      display: block;
+      width: 180px;
+      height: 25px;
+      margin: 0 auto;
+      line-height: 25px;
+      color: #fff;
+      background: #008742;
+      border-radius: 4px;
+    }
+  }
+  /* .product_item :hover { color:#fff; background:#09964e;} */
+  .goods_list {
+    .current {
+      .p-buy {
+        display: none;
+      }
+    }
+  }
+  

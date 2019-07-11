@@ -7,7 +7,7 @@ input[type=text]:focus, input[type=password]:focus { outline: 3px solid #b1d6ff;
 .login { background-color: #fff; border-top: 1px solid #65b42c; border-bottom: 1px solid #65b42c; margin-top: 20px; padding-top: 30px; }
 .login .fl img { margin-top: 20px; }
 .login .fr { padding-right: 105px; }
-.login-main { width: 308px; padding: 30px 20px 20px; background-color: #fff; border: 1px solid #e3e6e0; }
+.login-main { position: relative;;width: 308px; padding: 30px 20px 20px; background-color: #fff; border: 1px solid #e3e6e0; }
 .login-main .green { text-decoration: underline; }
 .login-main p { width: 100%; }
 .login p { margin-bottom: 20px; font: 12px Arial, "SimSun"; color: #878787; position: relative; overflow: hidden; }
@@ -25,7 +25,12 @@ i { display: inline-block;  *display: inline; *zoom: 1; width: 88px; height: 20p
 .sina i { background-position: -160px -200px; }
 .ay i { background-position: -260px -200px; width: 57px; margin-right: 0; }
 .msg-wrap { height: auto !important; margin: 2px 0px 5px; min-height: 31px; }
-.msg-error { position: relative; background: #FFEBEB none repeat scroll 0% 0%; border: 1px solid #E4393C; padding: 3px 10px 3px 40px; line-height: 18px; min-height: 18px; color: #E4393C; }
+
+.msg-error { position: absolute;left:20px;top:64px; background: #FFEBEB none repeat scroll 0% 0%; border: 1px solid #E4393C; padding: 3px 10px 3px 40px; line-height: 18px; min-height: 18px; color: #E4393C;width:253px;text-indent:6em}
+
+.msg-success { position: absolute;left:20px;top:64px; background: rgb(235, 255, 241) none repeat scroll 0% 0%; border: 1px solid rgb(23, 221, 205); padding: 3px 10px 3px 40px; line-height: 18px; min-height: 18px; color: rgb(49, 223, 115);width:253px;text-indent:4em}
+
+.msg-erweima { position: absolute;left:20px;top:64px; background: rgb(255, 235, 248) none repeat scroll 0% 0%; border: 1px solid rgb(221, 23, 155); padding: 3px 10px 3px 40px; line-height: 18px; min-height: 18px; color: rgb(223, 49, 180);width:253px;text-indent:4em}
 
 /*微博登录*/
 .login-weibo { width: 900px; margin: 0 auto; padding-bottom: 20px; }

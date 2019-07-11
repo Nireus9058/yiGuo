@@ -1,10 +1,42 @@
 
 class Page{
-    constructor(){
-    
-        
-        this.init();           
+    constructor(){        
+        this.init(); 
+        this.dengLu();
+        this.tuiChu();          
     }
+    dengLu(){
+        this.usermsg = JSON.parse(localStorage.getItem("usermsg"));
+        if(this.usermsg){
+            for(var i=0;i<this.usermsg.length;i++){  
+                if(this.usermsg[i].onoff == 1){
+                    // console.log(1)
+                    $("#_login a").html("已登录")
+                    $("#_register a").html("退出")
+            }
+                
+        }
+    
+    
+        }
+    }
+    tuiChu(){   
+        $("#_register a").click(function(){
+            this.usermsg = JSON.parse(localStorage.getItem("usermsg"));
+            for(var i=0;i<this.usermsg.length;i++){
+                console.log(i)
+                    this.usermsg[i].onoff = 0 
+                localStorage.setItem("usermsg",JSON.stringify(this.usermsg));
+                $("#_login a").html("登录")
+                $("#_register a").html("注册")
+                alert("确认后3秒返回登录页面")
+                setTimeout(() => {            
+                location.href = "http://localhost/1905/day12/project/login.html";             
+            }, 3000);
+            }
+        })
+      }       
+    
 
 
 init(){
@@ -21,7 +53,7 @@ init(){
     display(){
         let url =location.search;
         let s = url.split("?")[1].split("=")[1];
-        console.log(this.res.length)
+        // console.log(this.res.length)
         for(var i=0;i<this.res.length;i++){
             for(var j=0;j<this.res[i].length;j++){
                 

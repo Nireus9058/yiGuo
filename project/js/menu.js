@@ -2,6 +2,10 @@ class Tab{
     constructor(){
         this.menu();
         this.init();
+        this.gouWu();
+        this.dengLu();
+        this.tuiChu();
+
         
     };
     
@@ -15,6 +19,66 @@ class Tab{
             $(".sub-item").stop().hide();
           })
         
+    }
+    gouWu(){
+        var that = this
+        this.usermsg = JSON.parse(localStorage.getItem("usermsg"));
+        $(".shopping-cart").click(function(){
+            console.log(that.usermsg)
+            if(that.usermsg){
+          
+                for(var i=0;i<that.usermsg.length;i++){
+                    if( that.usermsg[i].onoff == 0 ){
+                      alert("请先登录,3秒后跳登录页面")
+                      setTimeout(() => {            
+                          location.href = "http://localhost/1905/day12/project/login.html";  
+                      }, 3000);
+                        
+                    }else {
+                        location.href = "http://localhost/1905/day12/project/shopping.html"; 
+                    }
+                   
+                  }
+            }else{
+                alert("请先登录,3秒后跳转注册页面")
+                setTimeout(() => {            
+                    location.href = "http://localhost/1905/day12/project/register.html";  
+                }, 3000);
+            }
+    
+            
+    
+            
+        })
+    }
+    dengLu(){
+        this.usermsg = JSON.parse(localStorage.getItem("usermsg"));
+        if(this.usermsg){
+        for(var i=0;i<this.usermsg.length;i++){    
+            if(this.usermsg[i].onoff == 1){
+                console.log(1)
+              $("#_login a").html("已登录")
+              $("#_register a").html("退出")
+        }
+      }
+     }
+    }
+    tuiChu(){
+      
+        $("#_register a").click(function(){
+            this.usermsg = JSON.parse(localStorage.getItem("usermsg"));
+            for(var i=0;i<this.usermsg.length;i++){
+                console.log(i)
+                   this.usermsg[i].onoff = 0 
+             localStorage.setItem("usermsg",JSON.stringify(this.usermsg));
+             $("#_login a").html("登录")
+             $("#_register a").html("注册")
+             alert("确认后3秒返回登录页面")
+             setTimeout(() => {            
+                location.href = "http://localhost/1905/day12/project/login.html";             
+            }, 3000);
+            }
+        })
     }
 
     init(){
@@ -51,14 +115,14 @@ class Tab{
         let str="";
         for(let j=0;j<this.res[i].length;j++){
             str+=`<li index="${this.res[i][j].goodId}">
-                <a href="#"><img src="${this.res[i][j].url}"></a>
+                <a href="http://localhost/1905/day12/project/page.html"><img src="${this.res[i][j].url}"></a>
 </li>`
         
         }
         $(`.fm${i+1}`).find('ul').html(str)
    
     }
-}
+  }
 }
 new Tab();
      
